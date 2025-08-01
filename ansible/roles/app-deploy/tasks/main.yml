@@ -1,0 +1,11 @@
+---
+- name: Copy Node.js app files
+  copy:
+    src: "{{ playbook_dir }}/../../node-app/"
+    dest: /home/ec2-user/node-app
+
+- name: Run Docker Compose
+  command: docker-compose up -d
+  args:
+    chdir: /home/ec2-user/node-app
+
