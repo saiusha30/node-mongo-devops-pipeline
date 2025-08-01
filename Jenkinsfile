@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/saiusha30/node-mongo-devops-pipeline.git'
+                 git branch: 'main', url: 'https://github.com/saiusha30/node-mongo-devops-pipeline.git'
             }
         }
 
